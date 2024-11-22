@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+
+  <head>
+    <title>Binary, Denary, Hexadecimal Converter</title>
+    	<style>
+    	h1 {color:green;font-family:Comic Sans MS;}
+	h2 {color:red;font-family:Comic Sans MS;}
+    	p{color:black;font-family:Arial};
+  	</style>
+  <head>
+
+<body>
+  <h1>Binary, Denary, Hexadecimal Converter</h1>
+  <h2>Binary Converter</h2>
+
+  <label for="binVal">Binary Value:</label>
+  <input type="text" id="binVal" name="binVal"><br><br>
+  <input id="button" type="submit" name="button" value="enter"/>
+
+  <p id="denAns"></p>
+  <p id="hexAns"></p>
+
+  <script>
+    document.getElementById('button').onclick = function() {
+    function binConverter(binaryNumber) {
+      let denVal = parseInt(binaryNumber, 2);
+      let hexVal = parseInt(binaryNumber, 2).toString(16).toUpperCase();
+      document.getElementById('denAns').innerHTML = "Denary Value: "+ denVal
+      document.getElementById('hexAns').innerHTML = "Hexadecimal Value: "+ hexVal
+    };
+    var binVal = document.getElementById("binVal").value;
+    var denVal = binConverter(binVal);};
+  </script>
+
+</body>
+
+</html>
